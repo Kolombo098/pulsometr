@@ -463,7 +463,6 @@
 .catalog .content {
   display: none;
   margin-top: 57px;
-  overflow: hidden;
 }
 
 .catalog .content_active {
@@ -476,15 +475,22 @@
   border: 2px solid #E8E8E8;
   padding: 0;
   margin: 0 auto 19px auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .catalog .content .catalog-item__wrapper {
   width: 200%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .catalog .content .catalog-item__content {
   width: 50%;
   padding: 0 22px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 .catalog .content .catalog-item__content img {
@@ -492,6 +498,11 @@
   max-width: 100%;
   margin: 0 auto;
   margin-top: 20px;
+}
+
+.catalog .content .catalog-item__content-active {
+  -webkit-transform: translatex(-100%);
+          transform: translatex(-100%);
 }
 
 .catalog .content .catalog-item__name {
@@ -512,11 +523,72 @@
 .catalog .content .catalog-item .more {
   font-weight: 500;
   font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.catalog .content .catalog-item .more:hover {
+  color: #C70101;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+  cursor: pointer;
+}
+
+.catalog .content .catalog-item__list {
+  width: 50%;
+  list-style-type: none;
+  padding: 16px 32px;
+  padding-bottom: 0;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.catalog .content .catalog-item__list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.catalog .content .catalog-item__list-item {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  color: #555555;
+}
+
+.catalog .content .catalog-item__list-item::before {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  left: -15px;
+  top: 8px;
+  background-color: #C70101;
+}
+
+.catalog .content .catalog-item__list-active {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.catalog .content .catalog-item .back {
+  font-weight: 500;
+  font-size: 14px;
   text-align: center;
+  text-transform: uppercase;
   margin-top: 10px;
+  position: relative;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.catalog .content .catalog-item .back:hover {
   color: #C70101;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  cursor: pointer;
 }
 
 .catalog .content .catalog-item hr {
@@ -535,6 +607,7 @@
       -ms-flex-align: start;
           align-items: start;
   margin-top: 18px;
+  padding: 0 22px;
 }
 
 .catalog .content .catalog-item__price {
