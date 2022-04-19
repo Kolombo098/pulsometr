@@ -33,7 +33,7 @@
 }
 
 .button_call {
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 .button_main {
@@ -592,8 +592,8 @@
 }
 
 .catalog .content .catalog-item hr {
-  margin: 0;
-  margin-top: 17px;
+  margin: 17px 22px;
+  margin-bottom: 0;
 }
 
 .catalog .content .catalog-item__footer {
@@ -627,6 +627,60 @@
   font-size: 20px;
   line-height: 20px;
   color: #050505;
+}
+
+.reviews {
+  margin-top: 60px;
+}
+
+.reviews__header {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.reviews .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 60px;
+}
+
+.reviews .review__avatar {
+  border-radius: 50%;
+  width: 169px;
+  height: 169px;
+}
+
+.reviews .review__content {
+  margin-left: 61px;
+  width: 680px;
+}
+
+.reviews .review__name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: #0D0D0D;
+}
+
+.reviews .review__record {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #646464;
+}
+
+.reviews .review__descr {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 10px;
+  color: #0D0D0D;
 }
 
 @media (max-width: 991px) {
@@ -665,21 +719,55 @@
   .consultation .form .button_form {
     width: 100%;
   }
+  .catalog__tabs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .catalog__tab {
+    margin-top: 20px;
+  }
+  .reviews .review {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .reviews .review__content {
+    width: 300px;
+    margin: 30px 0 0 0;
+  }
+  .reviews .review__name {
+    text-align: center;
+  }
+  .reviews .review__record {
+    text-align: center;
+  }
 }
 
 @media (max-width: 575px) {
   .header {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .header__call {
-    font-size: 10px;
-  }
-  .header__call .button {
-    font-size: 10px;
-    width: 107px;
-    height: 20px;
+    margin-top: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .promo .container {
     padding-right: var(--bs-gutter-x, 0.75rem);
@@ -689,25 +777,18 @@
     margin-top: 17px;
   }
   .promo__wrapper-icons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: top;
+        -ms-flex-align: top;
+            align-items: top;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 30px;
   }
-  .promo__wrapper-icons .promo-block {
-    margin-top: 30px;
-  }
-  .promo__wrapper-icons .promo-block:first-child {
-    margin-top: 0px;
-  }
-  .promo__wrapper-icons .promo-block__icon {
+  .promo__wrapper-icons:first-child__icon {
     width: 32px;
   }
-  .promo__wrapper-icons .promo-block__icon-text {
+  .promo__wrapper-icons:first-child__icon-text {
     font-size: 11px;
     margin-top: 10px;
   }
@@ -743,10 +824,17 @@
 }
 
 @media (max-width: 459px) {
-  .promo__call-to-action {
+  .promo__wrapper-icons .promo-block__icon {
+    width: 35px;
+    height: 35px;
+  }
+  .promo__wrapper-icons .promo-block__icon-text {
+    font-size: 12px;
+  }
+  .promo .promo__call-to-action {
     margin-top: 37px;
   }
-  .promo__call-to-action .button_main {
+  .promo .promo__call-to-action .button_main {
     width: 100%;
   }
   .benefit__header {
@@ -763,6 +851,22 @@
   }
   .consultation .form .button_form {
     width: 240px;
+  }
+  .catalog__header {
+    font-size: 23px;
+  }
+  .catalog__tab {
+    width: 181px;
+    height: 42px;
+  }
+  .catalog__tab div {
+    font-size: 15px;
+  }
+  .catalog .content .catalog-item {
+    width: 280px;
+  }
+  .catalog .content .catalog-item__price .new {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */

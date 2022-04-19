@@ -17,8 +17,13 @@
 
 @media (max-width:767px)
     .header
+        
+
         &__official
             display: none
+
+        
+
 
     .promo
         &__header
@@ -38,23 +43,48 @@
         .form
             input
                 width: 100%
-            .button_form
+            .button_form 
                 width: 100%
+        
+    .catalog
+        &__tabs
+            flex-direction: column
+            align-items: center
+            padding: 0
+
+        &__tab
+            margin-top: 20px
+
+    .reviews
+        .review
+            flex-direction: column
+            align-items: center
+
+            &__content
+                width: 300px
+                margin: 30px 0 0 0 
+
+            &__name
+                text-align: center
+
+            &__record
+                text-align: center
+
 
 
 
 @media (max-width:575px) 
     .header
-        justify-content: center
-
+        flex-direction: column
+        align-items: center
         &__logo
-
+        
         &__call
-            font-size: 10px
-            .button
-                font-size: 10px
-                width: 107px
-                height: 20px
+            margin-top: 40px
+            align-items: center
+
+
+        
     
                 
     .promo
@@ -64,14 +94,12 @@
         &__wrapper
             margin-top: 17px
             &-icons
-                flex-direction: column
-                align-items: center
+                align-items: top
+                justify-content: center
                 margin-top: 30px
 
-                .promo-block
-                    margin-top: 30px
-                    &:first-child
-                        margin-top: 0px
+                &:first-child
+                    mt
 
                     &__icon
                         width: 32px
@@ -112,12 +140,21 @@
             padding: 0 50px                
 
 @media (max-width:459px) 
-    .promo__call-to-action
-        margin-top: 37px
-        .button
-            &_main
-                width: 100%
-        .link
+    .promo
+        &__wrapper-icons
+            .promo-block
+                &__icon
+                    width: 35px
+                    height: 35px
+                    &-text
+                        font-size: 12px
+
+        .promo__call-to-action
+            margin-top: 37px
+            .button
+                &_main
+                    width: 100%
+        
 
     .benefit
         &__header
@@ -133,6 +170,24 @@
                     width: 240px
                 .button_form
                     width: 240px
+
+    .catalog
+        &__header
+            font-size: 23px
+
+        &__tab
+            width: 181px
+            height: 42px
+            div
+                font-size: 15px
+        
+        .content
+            .catalog-item
+                width: 280px
+
+                &__price
+                    .new
+                        font-size: 16px
         
 
 
